@@ -43,7 +43,6 @@ const TodoList: React.FC = () => {
     })
       .then(() => {
         // Remove the deleted todo from the state
-        console.log(todos);
         setTodos(todos.filter(todo => todo.id !== id));
       })
       .catch(error => {
