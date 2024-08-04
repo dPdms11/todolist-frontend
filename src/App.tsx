@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TodoList from './components/TodoList';
 import Footer from 'components/layout/Footer';
 import { useConfigCheck } from 'hooks/useConfigCheck ';
+import TodoForm from 'components/TodoForm';
+import ToDoDetails from 'components/TodoDetails';
 
 
 /**
@@ -24,7 +26,10 @@ const App: React.FC = () => {
       <div className="flex flex-col min-h-screen">
         <main className="flex-grow container mx-auto p-4">
           <Routes>
-            <Route path="*" element={<TodoList />} />
+            <Route path="/" element={<TodoList />} />
+            <Route path="/list" element={<TodoList />} />
+            <Route path="/add" element={<TodoForm />} />
+            <Route path="/todos/[todo_id]" element={<ToDoDetails />} />
           </Routes>
         </main>
         <Footer />
