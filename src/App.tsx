@@ -31,7 +31,7 @@ const App: React.FC = () => {
             <Route path="/" element={<TodoList />} />
             <Route path="/list" element={<TodoList />} />
             <Route path="/add" element={<TodoForm />} />
-            <Route path="/todos/[todo_id]" element={<ToDoDetails />} />
+            <Route path="/todos/:id" element={<ToDoDetails />} />
           </Routes>
         </main>
         <Footer />
