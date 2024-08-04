@@ -5,6 +5,7 @@ import Footer from 'components/layout/Footer';
 import { useConfigCheck } from 'hooks/useConfigCheck ';
 import TodoForm from 'components/TodoForm';
 import ToDoDetails from 'components/TodoDetails';
+import Header from 'components/layout/Header';
 
 
 /**
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
+        <Header />
         <main className="flex-grow container mx-auto p-4">
           <Routes>
             <Route path="/" element={<TodoList />} />

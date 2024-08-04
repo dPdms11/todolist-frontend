@@ -27245,6 +27245,8 @@ var _todoForm = require("components/TodoForm");
 var _todoFormDefault = parcelHelpers.interopDefault(_todoForm);
 var _todoDetails = require("components/TodoDetails");
 var _todoDetailsDefault = parcelHelpers.interopDefault(_todoDetails);
+var _header = require("components/layout/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
 var _s = $RefreshSig$();
 /**
  * The main application component that sets up routing for the app.
@@ -27262,6 +27264,11 @@ var _s = $RefreshSig$();
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "flex flex-col min-h-screen",
             children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                    fileName: "src/App.tsx",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
                     className: "flex-grow container mx-auto p-4",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -27270,32 +27277,8 @@ var _s = $RefreshSig$();
                                 path: "/",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 38
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App.tsx",
-                                lineNumber: 29,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/list",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
-                                    fileName: "src/App.tsx",
-                                    lineNumber: 30,
-                                    columnNumber: 42
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App.tsx",
-                                lineNumber: 30,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/add",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoFormDefault.default), {}, void 0, false, {
-                                    fileName: "src/App.tsx",
                                     lineNumber: 31,
-                                    columnNumber: 41
+                                    columnNumber: 38
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
@@ -27303,42 +27286,66 @@ var _s = $RefreshSig$();
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/todos/[todo_id]",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoDetailsDefault.default), {}, void 0, false, {
+                                path: "/list",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
                                     fileName: "src/App.tsx",
                                     lineNumber: 32,
-                                    columnNumber: 53
+                                    columnNumber: 42
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
                                 lineNumber: 32,
                                 columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/add",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoFormDefault.default), {}, void 0, false, {
+                                    fileName: "src/App.tsx",
+                                    lineNumber: 33,
+                                    columnNumber: 41
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 33,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/todos/[todo_id]",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoDetailsDefault.default), {}, void 0, false, {
+                                    fileName: "src/App.tsx",
+                                    lineNumber: 34,
+                                    columnNumber: 53
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 34,
+                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 28,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 27,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 35,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, undefined);
 };
@@ -27357,7 +27364,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/TodoList":"bx2Ne","components/layout/Footer":"l0qct","hooks/useConfigCheck ":"lz9Mn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/TodoForm":"7l86M","components/TodoDetails":"513B5"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/TodoList":"bx2Ne","components/layout/Footer":"l0qct","hooks/useConfigCheck ":"lz9Mn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/TodoForm":"7l86M","components/TodoDetails":"513B5","components/layout/Header":"2FVyV"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.25.1
  *
@@ -35122,6 +35129,78 @@ $RefreshReg$(_c, "ToDoDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9KtUr":[function() {},{}]},["94b1M","1xC6H","4aBH6"], "4aBH6", "parcelRequire25fd")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2FVyV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9974 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9974.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+/**
+ * A component that renders a fixed header at the top of the window.
+ * 
+ * @returns {React.FC} The Header component.
+ */ const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "flex justify-between items-center bg-gray-800 text-white py-4 px-5 sm:px-10 sticky top-0 left-0",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/",
+                children: "TODO"
+            }, void 0, false, {
+                fileName: "src/components/layout/Header.tsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-xs text-neutral-200",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/",
+                        className: "pr-6",
+                        children: "View List"
+                    }, void 0, false, {
+                        fileName: "src/components/layout/Header.tsx",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/add",
+                        children: "Add Todo"
+                    }, void 0, false, {
+                        fileName: "src/components/layout/Header.tsx",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/layout/Header.tsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/layout/Header.tsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$9974.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"9KtUr":[function() {},{}]},["94b1M","1xC6H","4aBH6"], "4aBH6", "parcelRequire25fd")
 
 //# sourceMappingURL=index.2d3ace14.js.map
