@@ -39,10 +39,11 @@ const TodoList: React.FC = () => {
    */
   const handleDelete = (id: number) => {
     fetch(`${process.env.TODO_BACKEND_API_URL}/todos/${id}`, {
-      method: 'POST',
+      method: 'DELETE',
     })
       .then(() => {
         // Remove the deleted todo from the state
+        console.log(todos);
         setTodos(todos.filter(todo => todo.id !== id));
       })
       .catch(error => {
