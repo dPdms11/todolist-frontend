@@ -27245,6 +27245,8 @@ var _todoForm = require("components/TodoForm");
 var _todoFormDefault = parcelHelpers.interopDefault(_todoForm);
 var _todoDetails = require("components/TodoDetails");
 var _todoDetailsDefault = parcelHelpers.interopDefault(_todoDetails);
+var _todoEdit = require("components/TodoEdit");
+var _todoEditDefault = parcelHelpers.interopDefault(_todoEdit);
 var _header = require("components/layout/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _s = $RefreshSig$();
@@ -27266,7 +27268,7 @@ var _s = $RefreshSig$();
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 28,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -27277,20 +27279,8 @@ var _s = $RefreshSig$();
                                 path: "/",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 38
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App.tsx",
-                                lineNumber: 31,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/list",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
-                                    fileName: "src/App.tsx",
                                     lineNumber: 32,
-                                    columnNumber: 42
+                                    columnNumber: 38
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
@@ -27298,11 +27288,11 @@ var _s = $RefreshSig$();
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/add",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoFormDefault.default), {}, void 0, false, {
+                                path: "/list",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoListDefault.default), {}, void 0, false, {
                                     fileName: "src/App.tsx",
                                     lineNumber: 33,
-                                    columnNumber: 41
+                                    columnNumber: 42
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
@@ -27310,42 +27300,66 @@ var _s = $RefreshSig$();
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/todos/:id",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoDetailsDefault.default), {}, void 0, false, {
+                                path: "/add",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoFormDefault.default), {}, void 0, false, {
                                     fileName: "src/App.tsx",
                                     lineNumber: 34,
-                                    columnNumber: 47
+                                    columnNumber: 41
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
                                 lineNumber: 34,
                                 columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/todos/:id",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoDetailsDefault.default), {}, void 0, false, {
+                                    fileName: "src/App.tsx",
+                                    lineNumber: 35,
+                                    columnNumber: 47
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 35,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/todos/edit/:id",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoEditDefault.default), {}, void 0, false, {
+                                    fileName: "src/App.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 52
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 36,
+                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.tsx",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 29,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 27,
+            lineNumber: 28,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -27364,7 +27378,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/TodoList":"bx2Ne","components/layout/Footer":"l0qct","hooks/useConfigCheck ":"lz9Mn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/TodoForm":"7l86M","components/TodoDetails":"513B5","components/layout/Header":"2FVyV"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/TodoList":"bx2Ne","components/layout/Footer":"l0qct","hooks/useConfigCheck ":"lz9Mn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/TodoForm":"7l86M","components/TodoDetails":"513B5","components/layout/Header":"2FVyV","components/TodoEdit":"akxq1"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.25.1
  *
@@ -34562,13 +34576,23 @@ var _s = $RefreshSig$();
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>navigate(`todos/edit/${todo.id}`),
+                                className: "ml-4 px-4 py-2 text-blue-500 hover:text-blue-700 focus:outline-none border border-blue-500 rounded",
+                                "aria-label": "Edit todo",
+                                children: "Edit"
+                            }, void 0, false, {
+                                fileName: "src/components/TodoList.tsx",
+                                lineNumber: 96,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 onClick: ()=>handleComplete(todo),
                                 className: "ml-4 px-4 py-2 text-green-500 hover:text-green-700 focus:outline-none border border-green-500 rounded",
-                                "aria-label": "Delete todo",
+                                "aria-label": "Complete todo",
                                 children: "\u2713"
                             }, void 0, false, {
                                 fileName: "src/components/TodoList.tsx",
-                                lineNumber: 105,
+                                lineNumber: 103,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34578,7 +34602,7 @@ var _s = $RefreshSig$();
                                 children: "X"
                             }, void 0, false, {
                                 fileName: "src/components/TodoList.tsx",
-                                lineNumber: 112,
+                                lineNumber: 110,
                                 columnNumber: 17
                             }, undefined)
                         ]
@@ -34599,7 +34623,7 @@ var _s = $RefreshSig$();
                         children: "No Todos available"
                     }, void 0, false, {
                         fileName: "src/components/TodoList.tsx",
-                        lineNumber: 124,
+                        lineNumber: 122,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34609,18 +34633,18 @@ var _s = $RefreshSig$();
                             children: "Add New Todo"
                         }, void 0, false, {
                             fileName: "src/components/TodoList.tsx",
-                            lineNumber: 126,
+                            lineNumber: 124,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/TodoList.tsx",
-                        lineNumber: 125,
+                        lineNumber: 123,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/TodoList.tsx",
-                lineNumber: 123,
+                lineNumber: 121,
                 columnNumber: 11
             }, undefined)
         ]
@@ -35235,6 +35259,250 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"9KtUr":[function() {},{}]},["94b1M","1xC6H","4aBH6"], "4aBH6", "parcelRequire25fd")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"akxq1":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9a48 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9a48.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+/**
+ * ToDoEdit component allows updates to the details of a specific Todo item.
+ * It fetches the Todo details based on the ID from the URL parameters.
+ * Handles loading state and potential errors during data fetching.
+ *
+ * @returns {React.FC} The ToDoEdit component.
+ */ const ToDoEdit = ()=>{
+    _s();
+    const { id } = (0, _reactRouterDom.useParams)(); // Retrieve the ID from URL parameters
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [todo, setTodo] = (0, _react.useState)(null); // State to store the fetched ToDo
+    const [loading, setLoading] = (0, _react.useState)(true); // State to indicate loading status
+    /**
+   * Handles the form submission.
+   * Prevents the default form submission behavior, sets loading state to true,
+   * and sends a PUT request to the backend to update Todo item.
+   * Updates the form state and loading status based on the response.
+   * 
+   * @param event - The form submission event
+   */ const handleSubmit = (event)=>{
+        event.preventDefault(); // Prevent default form behavior
+        setLoading(true); // Set loading to true when submission starts
+        fetch(`${"http://127.0.0.1:5000"}/todos/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(todo)
+        }).then((response)=>response.json()).then(()=>{
+            setLoading(false); // Set loading to false after submission completes
+        }).catch((error)=>{
+            console.error("Error adding todo:", error); // Log any errors
+            setLoading(false); // Set loading to false if an error occurs
+        });
+    };
+    // Handle changes to form fields
+    const handleChange = (e)=>{
+        const { name, value } = e.target;
+        setTodo((prevFormData)=>({
+                ...prevFormData,
+                [name]: name === "priority" ? Number(value) : value
+            }));
+    };
+    (0, _react.useEffect)(()=>{
+        if (id) fetch(`${"http://127.0.0.1:5000"}/todos/${id}`).then((response)=>response.json()).then((data)=>{
+            setTodo(data);
+            setLoading(false);
+        }).catch((error)=>{
+            console.error("Error fetching todo details:", error);
+            setLoading(false);
+        });
+    }, [
+        id
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "Loading..."
+        }, void 0, false, {
+            fileName: "src/components/TodoEdit.tsx",
+            lineNumber: 76,
+            columnNumber: 7
+        }, undefined) : todo ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+            onSubmit: handleSubmit,
+            className: "flex flex-col items-stretch mb-6 p-4 bg-white shadow-lg rounded-lg",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            name: "title",
+                            value: todo.title,
+                            onChange: handleChange,
+                            placeholder: "Title",
+                            className: "p-3 border border-gray-300 rounded-md mb-3 w-full",
+                            disabled: loading,
+                            required: true
+                        }, void 0, false, {
+                            fileName: "src/components/TodoEdit.tsx",
+                            lineNumber: 83,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex flex-col px-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                    htmlFor: "completed",
+                                    className: "pb-1",
+                                    children: "Completed?"
+                                }, void 0, false, {
+                                    fileName: "src/components/TodoEdit.tsx",
+                                    lineNumber: 94,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    type: "checkbox",
+                                    id: "completed",
+                                    name: "completed",
+                                    checked: todo.completed,
+                                    // Update state of item completion
+                                    onChange: ()=>setTodo((prevTodo)=>({
+                                                ...prevTodo,
+                                                completed: !prevTodo.completed
+                                            })),
+                                    className: `px-4 py-3 h-5`,
+                                    disabled: loading
+                                }, void 0, false, {
+                                    fileName: "src/components/TodoEdit.tsx",
+                                    lineNumber: 95,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/TodoEdit.tsx",
+                            lineNumber: 93,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/TodoEdit.tsx",
+                    lineNumber: 82,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                    name: "description",
+                    value: todo.description,
+                    onChange: handleChange,
+                    placeholder: "Description",
+                    className: "p-3 border border-gray-300 rounded-md mb-3 w-full",
+                    rows: 3,
+                    disabled: loading
+                }, void 0, false, {
+                    fileName: "src/components/TodoEdit.tsx",
+                    lineNumber: 111,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                    name: "priority",
+                    value: todo.priority,
+                    onChange: handleChange,
+                    className: "p-3 border border-gray-300 rounded-md mb-4 w-full",
+                    disabled: loading,
+                    required: true,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                            value: "",
+                            children: "Select priority"
+                        }, void 0, false, {
+                            fileName: "src/components/TodoEdit.tsx",
+                            lineNumber: 128,
+                            columnNumber: 13
+                        }, undefined),
+                        " ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                            value: 1,
+                            children: "High"
+                        }, void 0, false, {
+                            fileName: "src/components/TodoEdit.tsx",
+                            lineNumber: 129,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                            value: 2,
+                            children: "Medium"
+                        }, void 0, false, {
+                            fileName: "src/components/TodoEdit.tsx",
+                            lineNumber: 130,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                            value: 3,
+                            children: "Low"
+                        }, void 0, false, {
+                            fileName: "src/components/TodoEdit.tsx",
+                            lineNumber: 131,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/TodoEdit.tsx",
+                    lineNumber: 120,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    type: "submit",
+                    className: `px-4 py-3 rounded-md ${loading ? "bg-gray-500" : "bg-blue-500 hover:bg-blue-600"} text-white focus:outline-none focus:ring-2 focus:ring-blue-500`,
+                    disabled: loading,
+                    children: [
+                        loading ? "Saving..." : "Save",
+                        " "
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/TodoEdit.tsx",
+                    lineNumber: 133,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/TodoEdit.tsx",
+            lineNumber: 78,
+            columnNumber: 9
+        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "Todo not found."
+        }, void 0, false, {
+            fileName: "src/components/TodoEdit.tsx",
+            lineNumber: 142,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/TodoEdit.tsx",
+        lineNumber: 74,
+        columnNumber: 5
+    }, undefined);
+};
+_s(ToDoEdit, "BPd/hAa77ToZzRcd5baF+zF7Gzk=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = ToDoEdit;
+exports.default = ToDoEdit;
+var _c;
+$RefreshReg$(_c, "ToDoEdit");
+
+  $parcel$ReactRefreshHelpers$9a48.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9KtUr":[function() {},{}]},["94b1M","1xC6H","4aBH6"], "4aBH6", "parcelRequire25fd")
 
 //# sourceMappingURL=index.2d3ace14.js.map

@@ -93,19 +93,17 @@ const TodoList: React.FC = () => {
                 <Link to={`/todos/${todo.id}`} className={`flex-1 ${todo.completed ? 'line-through text-gray-600' : ''}`}>
                   {todo.title}
                 </Link>
-                {/*
                 <button
-                  onClick={() => alert('Feature not available. Coming Soon!')}
+                  onClick={() => navigate(`todos/edit/${todo.id}`)}
                   className="ml-4 px-4 py-2 text-blue-500 hover:text-blue-700 focus:outline-none border border-blue-500 rounded"
-                  aria-label="Delete todo"
+                  aria-label="Edit todo"
                 >
                   Edit
                 </button>
-                */}
                 <button
                   onClick={() => handleComplete(todo)}
                   className="ml-4 px-4 py-2 text-green-500 hover:text-green-700 focus:outline-none border border-green-500 rounded"
-                  aria-label="Delete todo"
+                  aria-label="Complete todo"
                 >
                   &#10003;
                 </button>

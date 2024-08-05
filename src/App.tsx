@@ -5,6 +5,7 @@ import Footer from 'components/layout/Footer';
 import { useConfigCheck } from 'hooks/useConfigCheck ';
 import TodoForm from 'components/TodoForm';
 import ToDoDetails from 'components/TodoDetails';
+import ToDoEdit from 'components/TodoEdit';
 import Header from 'components/layout/Header';
 
 
@@ -32,6 +33,7 @@ const App: React.FC = () => {
             <Route path="/list" element={<TodoList />} />
             <Route path="/add" element={<TodoForm />} />
             <Route path="/todos/:id" element={<ToDoDetails />} />
+            <Route path="/todos/edit/:id" element={<ToDoEdit />} />
           </Routes>
         </main>
         <Footer />
