@@ -16,45 +16,6 @@ const ToDoDetails: React.FC = () => {
   const [todo, setTodo] = useState<ToDo | null>(null); // State to store the fetched ToDo
   const [loading, setLoading] = useState<boolean>(true); // State to indicate loading status
 
-  /**
-   * Handles the form submission.
-   * Prevents the default form submission behavior, sets loading state to true,
-   * and sends a PUT request to the backend to update Todo item.
-   * Updates the form state and loading status based on the response.
-   * 
-   * @param event - The form submission event
-   */
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent default form behavior
-
-    setLoading(true); // Set loading to true when submission starts
-
-    fetch(`${process.env.TODO_BACKEND_API_URL}/todos/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(todo),
-    })
-      .then(response => response.json())
-      .then(() => {
-        setLoading(false); // Set loading to false after submission completes
-      })
-      .catch(error => {
-        console.error('Error adding todo:', error); // Log any errors
-        setLoading(false); // Set loading to false if an error occurs
-      });
-  };
-
-  // Handle changes to form fields
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setTodo((prevFormData: any) => ({
-      ...prevFormData,
-      [name]: name === 'priority' ? Number(value) : value,
-    }));
-  };
-
   useEffect(() => {
     if (id) {
       fetch(`${process.env.TODO_BACKEND_API_URL}/todos/${id}`)
@@ -71,63 +32,27 @@ const ToDoDetails: React.FC = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="p-4 bg-white shadow-lg rounded-lg">
       {loading ? (
-      <p>Loading...</p>
+        <p>Loading...</p>
       ) : todo ? (
-        <form 
-          onSubmit={handleSubmit} 
-          className="flex flex-col items-stretch mb-6 p-4 bg-white shadow-lg rounded-lg"
-        >
-          <input
-            type="text"
-            name="title"
-            value={todo.title}
-            onChange={handleChange}
-            placeholder="Title"
-            className="p-3 border border-gray-300 rounded-md mb-3 w-full"
-            disabled={loading}
-            required
-          />
-          <textarea
-            name="description"
-            value={todo.description}
-            onChange={handleChange}
-            placeholder="Description"
-            className="p-3 border border-gray-300 rounded-md mb-3 w-full"
-            rows={3}
-            disabled={loading} 
-          />
-          <select
-            name="priority"
-            value={todo.priority}
-            onChange={handleChange}
-            className="p-3 border border-gray-300 rounded-md mb-4 w-full"
-            disabled={loading} // Disable select when loading
-            required // Make this field required
-          >
-            <option value="">Select priority</option> {/* Default option */}
-            <option value={1}>High</option>
-            <option value={2}>Medium</option>
-            <option value={3}>Low</option>
-          </select>
+        <>
+          <h2 className="text-2xl font-semibold mb-4">{todo.title}</h2>
+          <p className="mb-4">{todo.description || 'No description available.'}</p>
+          <p className="mb-4">Status: {todo.completed ? 'Completed' : 'Not Completed'}</p>
+          {todo.priority !== undefined && (
+            <p className="mb-4">Priority: {todo.priority === 1 ? 'High' : todo.priority === 2 ? 'Medium' : 'Low'}</p>
+          )}
           <button
-            type="submit"
-            className={`px-4 py-3 rounded-md ${loading ? 'bg-gray-500' : 'bg-blue-500 hover:bg-blue-600'} text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
-            disabled={loading} // Disable button when loading
+            onClick={() => navigate('/')}
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
-            {loading ? 'Updating...' : 'Update'} {/* Show loading text */}
+            Back to List
           </button>
-        </form>
+        </>
       ) : (
-      <p>Todo not found.</p>
-    )}
-      <button
-        onClick={() => navigate('/')}
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-      >
-        Back to List
-      </button>  
+        <p>Todo not found.</p>
+      )}
     </div>
   );
 }

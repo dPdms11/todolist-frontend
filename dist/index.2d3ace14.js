@@ -35065,37 +35065,6 @@ var _s = $RefreshSig$();
     const navigate = (0, _reactRouterDom.useNavigate)();
     const [todo, setTodo] = (0, _react.useState)(null); // State to store the fetched ToDo
     const [loading, setLoading] = (0, _react.useState)(true); // State to indicate loading status
-    /**
-   * Handles the form submission.
-   * Prevents the default form submission behavior, sets loading state to true,
-   * and sends a PUT request to the backend to update Todo item.
-   * Updates the form state and loading status based on the response.
-   * 
-   * @param event - The form submission event
-   */ const handleSubmit = (event)=>{
-        event.preventDefault(); // Prevent default form behavior
-        setLoading(true); // Set loading to true when submission starts
-        fetch(`${"http://127.0.0.1:5000"}/todos/${id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(todo)
-        }).then((response)=>response.json()).then(()=>{
-            setLoading(false); // Set loading to false after submission completes
-        }).catch((error)=>{
-            console.error("Error adding todo:", error); // Log any errors
-            setLoading(false); // Set loading to false if an error occurs
-        });
-    };
-    // Handle changes to form fields
-    const handleChange = (e)=>{
-        const { name, value } = e.target;
-        setTodo((prevFormData)=>({
-                ...prevFormData,
-                [name]: name === "priority" ? Number(value) : value
-            }));
-    };
     (0, _react.useEffect)(()=>{
         if (id) fetch(`${"http://127.0.0.1:5000"}/todos/${id}`).then((response)=>response.json()).then((data)=>{
             setTodo(data);
@@ -35108,129 +35077,73 @@ var _s = $RefreshSig$();
         id
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Loading..."
-            }, void 0, false, {
-                fileName: "src/components/TodoDetails.tsx",
-                lineNumber: 76,
-                columnNumber: 7
-            }, undefined) : todo ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                onSubmit: handleSubmit,
-                className: "flex flex-col items-stretch mb-6 p-4 bg-white shadow-lg rounded-lg",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        name: "title",
-                        value: todo.title,
-                        onChange: handleChange,
-                        placeholder: "Title",
-                        className: "p-3 border border-gray-300 rounded-md mb-3 w-full",
-                        disabled: loading,
-                        required: true
-                    }, void 0, false, {
-                        fileName: "src/components/TodoDetails.tsx",
-                        lineNumber: 82,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
-                        name: "description",
-                        value: todo.description,
-                        onChange: handleChange,
-                        placeholder: "Description",
-                        className: "p-3 border border-gray-300 rounded-md mb-3 w-full",
-                        rows: 3,
-                        disabled: loading
-                    }, void 0, false, {
-                        fileName: "src/components/TodoDetails.tsx",
-                        lineNumber: 92,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-                        name: "priority",
-                        value: todo.priority,
-                        onChange: handleChange,
-                        className: "p-3 border border-gray-300 rounded-md mb-4 w-full",
-                        disabled: loading,
-                        required: true,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                value: "",
-                                children: "Select priority"
-                            }, void 0, false, {
-                                fileName: "src/components/TodoDetails.tsx",
-                                lineNumber: 109,
-                                columnNumber: 13
-                            }, undefined),
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                value: 1,
-                                children: "High"
-                            }, void 0, false, {
-                                fileName: "src/components/TodoDetails.tsx",
-                                lineNumber: 110,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                value: 2,
-                                children: "Medium"
-                            }, void 0, false, {
-                                fileName: "src/components/TodoDetails.tsx",
-                                lineNumber: 111,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                value: 3,
-                                children: "Low"
-                            }, void 0, false, {
-                                fileName: "src/components/TodoDetails.tsx",
-                                lineNumber: 112,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/TodoDetails.tsx",
-                        lineNumber: 101,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        type: "submit",
-                        className: `px-4 py-3 rounded-md ${loading ? "bg-gray-500" : "bg-blue-500 hover:bg-blue-600"} text-white focus:outline-none focus:ring-2 focus:ring-blue-500`,
-                        disabled: loading,
-                        children: [
-                            loading ? "Updating..." : "Update",
-                            " "
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/TodoDetails.tsx",
-                        lineNumber: 114,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/TodoDetails.tsx",
-                lineNumber: 78,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Todo not found."
-            }, void 0, false, {
-                fileName: "src/components/TodoDetails.tsx",
-                lineNumber: 123,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>navigate("/"),
-                className: "mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600",
-                children: "Back to List"
-            }, void 0, false, {
-                fileName: "src/components/TodoDetails.tsx",
-                lineNumber: 125,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        className: "p-4 bg-white shadow-lg rounded-lg",
+        children: loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "Loading..."
+        }, void 0, false, {
+            fileName: "src/components/TodoDetails.tsx",
+            lineNumber: 37,
+            columnNumber: 9
+        }, undefined) : todo ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "text-2xl font-semibold mb-4",
+                    children: todo.title
+                }, void 0, false, {
+                    fileName: "src/components/TodoDetails.tsx",
+                    lineNumber: 40,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "mb-4",
+                    children: todo.description || "No description available."
+                }, void 0, false, {
+                    fileName: "src/components/TodoDetails.tsx",
+                    lineNumber: 41,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "mb-4",
+                    children: [
+                        "Status: ",
+                        todo.completed ? "Completed" : "Not Completed"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/TodoDetails.tsx",
+                    lineNumber: 42,
+                    columnNumber: 11
+                }, undefined),
+                todo.priority !== undefined && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "mb-4",
+                    children: [
+                        "Priority: ",
+                        todo.priority === 1 ? "High" : todo.priority === 2 ? "Medium" : "Low"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/TodoDetails.tsx",
+                    lineNumber: 44,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>navigate("/"),
+                    className: "mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600",
+                    children: "Back to List"
+                }, void 0, false, {
+                    fileName: "src/components/TodoDetails.tsx",
+                    lineNumber: 46,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "Todo not found."
+        }, void 0, false, {
+            fileName: "src/components/TodoDetails.tsx",
+            lineNumber: 54,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/TodoDetails.tsx",
-        lineNumber: 74,
+        lineNumber: 35,
         columnNumber: 5
     }, undefined);
 };
