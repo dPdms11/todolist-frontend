@@ -34522,7 +34522,7 @@ var _s = $RefreshSig$();
             },
             body: JSON.stringify(updatedTodoItem)
         }).then(()=>{
-            // Remove the deleted todo from the state
+            // Update todos state to reflect completed item
             setTodos((prevTodo)=>prevTodo.map((todo)=>todo.id === id ? updatedTodoItem : todo));
         }).catch((error)=>{
             console.error("Error updating todo:", error);

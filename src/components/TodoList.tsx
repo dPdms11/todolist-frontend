@@ -68,7 +68,7 @@ const TodoList: React.FC = () => {
         body: JSON.stringify(updatedTodoItem),
       })
         .then(() => {
-          // Remove the deleted todo from the state
+          // Update todos state to reflect completed item
           setTodos(prevTodo => 
             prevTodo.map(todo =>
               todo.id === id ? updatedTodoItem : todo)
