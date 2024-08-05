@@ -34504,6 +34504,30 @@ var _s = $RefreshSig$();
             console.error("Error deleting todo:", error);
         });
     };
+    /**
+   * Updates a ToDo item that's completed by sending a PUT request to the backend API.
+   * Updates the todos state to complete the ToDo item.
+   * 
+   * @param id - The ID of the completed ToDo item.
+   */ const handleComplete = (todo)=>{
+        const id = todo["id"];
+        const updatedTodoItem = {
+            ...todo,
+            completed: true
+        };
+        fetch(`${"http://127.0.0.1:5000"}/todos/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedTodoItem)
+        }).then(()=>{
+            // Remove the deleted todo from the state
+            setTodos((prevTodo)=>prevTodo.map((todo)=>todo.id === id ? updatedTodoItem : todo));
+        }).catch((error)=>{
+            console.error("Error updating todo:", error);
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "p-4 bg-gray-100 rounded-lg shadow-lg",
         children: [
@@ -34512,7 +34536,7 @@ var _s = $RefreshSig$();
                 children: "My List"
             }, void 0, false, {
                 fileName: "src/components/TodoList.tsx",
-                lineNumber: 55,
+                lineNumber: 84,
                 columnNumber: 7
             }, undefined),
             loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -34520,7 +34544,7 @@ var _s = $RefreshSig$();
                 children: "Loading..."
             }, void 0, false, {
                 fileName: "src/components/TodoList.tsx",
-                lineNumber: 58,
+                lineNumber: 87,
                 columnNumber: 9
             }, undefined) // Display loading message
              : todos.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -34534,7 +34558,17 @@ var _s = $RefreshSig$();
                                 children: todo.title
                             }, void 0, false, {
                                 fileName: "src/components/TodoList.tsx",
-                                lineNumber: 64,
+                                lineNumber: 93,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>handleComplete(todo),
+                                className: "ml-4 px-4 py-2 text-green-500 hover:text-green-700 focus:outline-none border border-green-500 rounded",
+                                "aria-label": "Delete todo",
+                                children: "\u2713"
+                            }, void 0, false, {
+                                fileName: "src/components/TodoList.tsx",
+                                lineNumber: 105,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34544,18 +34578,18 @@ var _s = $RefreshSig$();
                                 children: "X"
                             }, void 0, false, {
                                 fileName: "src/components/TodoList.tsx",
-                                lineNumber: 76,
+                                lineNumber: 112,
                                 columnNumber: 17
                             }, undefined)
                         ]
                     }, todo.id, true, {
                         fileName: "src/components/TodoList.tsx",
-                        lineNumber: 63,
+                        lineNumber: 92,
                         columnNumber: 15
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/TodoList.tsx",
-                lineNumber: 61,
+                lineNumber: 90,
                 columnNumber: 11
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-col mb-6 p-4 bg-white shadow-lg rounded-lg",
@@ -34565,7 +34599,7 @@ var _s = $RefreshSig$();
                         children: "No Todos available"
                     }, void 0, false, {
                         fileName: "src/components/TodoList.tsx",
-                        lineNumber: 88,
+                        lineNumber: 124,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34575,24 +34609,24 @@ var _s = $RefreshSig$();
                             children: "Add New Todo"
                         }, void 0, false, {
                             fileName: "src/components/TodoList.tsx",
-                            lineNumber: 90,
+                            lineNumber: 126,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/TodoList.tsx",
-                        lineNumber: 89,
+                        lineNumber: 125,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/TodoList.tsx",
-                lineNumber: 87,
+                lineNumber: 123,
                 columnNumber: 11
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/TodoList.tsx",
-        lineNumber: 54,
+        lineNumber: 83,
         columnNumber: 5
     }, undefined);
 };

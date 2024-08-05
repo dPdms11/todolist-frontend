@@ -50,6 +50,35 @@ const TodoList: React.FC = () => {
       });
   };
 
+    /**
+   * Updates a ToDo item that's completed by sending a PUT request to the backend API.
+   * Updates the todos state to complete the ToDo item.
+   * 
+   * @param id - The ID of the completed ToDo item.
+   */
+    const handleComplete = (todo: ToDo) => {
+      const id = todo["id"];
+      const updatedTodoItem = { ...todo, completed: true };
+
+      fetch(`${process.env.TODO_BACKEND_API_URL}/todos/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedTodoItem),
+      })
+        .then(() => {
+          // Remove the deleted todo from the state
+          setTodos(prevTodo => 
+            prevTodo.map(todo =>
+              todo.id === id ? updatedTodoItem : todo)
+            );
+        })
+        .catch(error => {
+          console.error('Error updating todo:', error);
+        });
+    };
+
   return (
     <div className="p-4 bg-gray-100 rounded-lg shadow-lg">
       <h2 className="text-xl font-semibold mb-4">My List</h2>
@@ -73,6 +102,13 @@ const TodoList: React.FC = () => {
                   Edit
                 </button>
                 */}
+                <button
+                  onClick={() => handleComplete(todo)}
+                  className="ml-4 px-4 py-2 text-green-500 hover:text-green-700 focus:outline-none border border-green-500 rounded"
+                  aria-label="Delete todo"
+                >
+                  &#10003;
+                </button>
                 <button
                   onClick={() => handleDelete(todo.id)}
                   className="ml-4 px-4 py-2 text-red-500 hover:text-red-700 focus:outline-none border border-red-500 rounded"
