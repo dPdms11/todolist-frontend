@@ -35217,7 +35217,7 @@ var _reactRouterDom = require("react-router-dom");
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-xs text-neutral-200",
+                className: "text-xs sm:text-sm text-neutral-200",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/",

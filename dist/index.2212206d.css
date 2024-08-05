@@ -680,5 +680,10 @@ img, video {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+
+  .sm\:text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
 }
 /*# sourceMappingURL=index.2212206d.css.map */
