@@ -35304,7 +35304,7 @@ var _s = $RefreshSig$();
         }).then((response)=>response.json()).then(()=>{
             setLoading(false); // Set loading to false after submission completes
         }).catch((error)=>{
-            console.error("Error adding todo:", error); // Log any errors
+            console.error("Error editing todo:", error); // Log any errors
             setLoading(false); // Set loading to false if an error occurs
         });
     };

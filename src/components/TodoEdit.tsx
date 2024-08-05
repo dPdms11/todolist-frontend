@@ -41,7 +41,7 @@ const ToDoEdit: React.FC = () => {
         setLoading(false); // Set loading to false after submission completes
       })
       .catch(error => {
-        console.error('Error adding todo:', error); // Log any errors
+        console.error('Error editing todo:', error); // Log any errors
         setLoading(false); // Set loading to false if an error occurs
       });
   };
